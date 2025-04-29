@@ -33,7 +33,7 @@ from sklearn.metrics import accuracy_score, classification_report
 # OpenRouter chat helper
 # ───────────────────────────────────────────────────────
 API_KEY = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY") or ""
-DEFAULT_MODEL = "mistralai/mistral-7b-instruct"
+DEFAULT_MODEL = "mistralai/mistral-7b-instruct:free"
 
 def send_chat(messages, model=DEFAULT_MODEL, temperature=0.7):
     if not API_KEY:
